@@ -13,7 +13,7 @@ const fetchPokemon = () => {
             accumulator += `
             <li class="card ${types[0]}">
             <img class="card-image" alt="${pokemon.name}" src="./assets/img/pokemons/poke_${pokemon.id}.gif" />
-            <h2 class="class-title">${pokemon.id}. ${pokemon.name}</h2>
+            <h2 class="card-title">${pokemon.id}. ${pokemon.name}</h2>
             <p class="card-subtitle">${types.join(' | ')}</p>
             </li>`
             return accumulator
@@ -26,3 +26,4 @@ const fetchPokemon = () => {
 }
 
 fetchPokemon()
+
