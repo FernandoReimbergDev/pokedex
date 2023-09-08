@@ -16,9 +16,7 @@ body {
 	width: 100%;
 }
 
-@media (min-width: 763px) {
-	
-
+@media (min-width: 1001px) {
 
 .container {
 	padding: 40px;
@@ -168,10 +166,11 @@ h1 {
 }
 
 
-@media (max-width:762px) {
+@media (max-width: 1000px) {
 
 	.container {
 		padding: 20px;
+		height: 100vh;
 		max-width: 100%;
 	}
 	
@@ -181,106 +180,125 @@ h1 {
 	}
 	
 	.pokedex {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-wrap: wrap;
-		gap: 1rem;
+		display: grid;
+		row-gap: 1rem;
+		grid-template-columns: 100%;
 	}
 	
 	.card {
 		list-style: none;
-		min-width: 300px;
-		max-width: 300px;
-		min-height: 300px;
-		max-height: 300px;
 		padding: 40px;
 		color: #222;
 		text-align: center;
 		border-radius: 20px;
 		position: relative;
+		border: 1px solid;
+		width: 80%;
+		margin: 0 auto;
 	}
 	
-	.card::after {
+	/* .card::after {
 	  content: "";
 	  display: block;
-	  width: 50%;
-	  height: 45%;
+	  width: 200px;
+	  height: 200px;
 	  border-radius: 100%;
 	  background-color: #fff;
 	  opacity: .7;
 	  position: absolute;
-	  top: 15%;
-	  left: 25%;
-	}
+	  top: 8%;
+	  left: 50%;
+	  transform: translate(-50%);
+	  z-index: 1;
+	} */
 	
 	.steel {
-		background-color: #f4f4f4;
+		/* background-color: #f4f4f4; */
+		background-image: url(./assets/tipos/normal.jpg);
 	}
 	
 	.fire {
-		background-color: #FDDFDF;
+		/* background-color: #FDDFDF; */
+		background-image: url(./assets/tipos/fogo.jpg);
 	}
 	
 	.grass {
-		background-color: #DEFDE0;
+		/* background-color: #DEFDE0; */
+		background-image: url(./assets/tipos/grama.jpg);
 	}
 	
 	.electric {
-		background-color: #FCF7DE;
+		/* background-color: #FCF7DE; */
+		background-image: url(./assets/tipos/eletrico.jpg);
+
 	}
 	
 	.water, .ice {
-		background-color: #DEF3FD;
+		/* background-color: #DEF3FD; */
+		background-image: url(./assets/tipos/agua.jpg);
 	}
 	
 	.ground {
-		background-color: #f4e7da;
+		/* background-color: #f4e7da; */
+		background-image: url(./assets/tipos/rock.jpg);
 	}
 	
 	.rock {
-		background-color: #d5d5d4;
+		/* background-color: #d5d5d4; */
+		background-image: url(./assets/tipos/rock.jpg);
 	}
 	
 	.fairy {
-		background-color: #fceaff;
+		/* background-color: #fceaff; */
+		background-image: url(./assets/tipos/fada.jpg);
+
 	}
 	
 	.poison {
-		background-color: #c34df1;
+		/* background-color: #c34df1; */
+		background-image: url(./assets/tipos/psiquico.jpg);
 	}
 	
 	.bug {
-		background-color: #f8d5a3;
+		/* background-color: #f8d5a3; */
+		background-image: url(./assets/tipos/bug.jpg);
 	}
 	
 	.dragon {
-		background-color: #97b3e6;
+		/* background-color: #97b3e6; */
+		background-image: url(./assets/tipos/voador.png);
+
 	}
 	
 	.psychic {
-		background-color: #eaeda1;
+		/* background-color: #eaeda1; */
+		background-image: url(./assets/tipos/psiquico.jpg);
 	}
 	
 	.flying {
-		background-color: #F5F5F5;
+		/* background-color: #F5F5F5; */
+		background-image: url(./assets/tipos/voador.png);
 	}
 	
 	.fighting {
-		background-color: #E6E0D4;
+		/* background-color: #E6E0D4; */
+		background-image: url(./assets/tipos/lutador.jpg);
 	}
 	
 	.normal {
-		background-color: #F5F5F5;
+		/* background-color: #F5F5F5; */
+		background-image: url(./assets/tipos/normal.jpg);
 	}
 	
 	.dark {
-		background-color: #333;
+		/* background-color: #333; */
 		color: white;
+		background-image: url(./assets/tipos/noturno.jpg);
 	}
 	
 	.ghost {
-		background-color: #222;
+		/* background-color: #222; */
+		background-image: url(./assets/tipos/ghost.jpg);
 		color: white;
 	}
 	
@@ -291,22 +309,22 @@ h1 {
 	.card-title {
 		text-transform: capitalize;
 		margin-bottom: 0px;
-		font-size: 32px;
-		font-weight: normal;
+		font-size: 35px;
+		font-weight: bold;
 		position: relative;
-		z-index: 2;
+		z-index: 3;
 	}
 	
 	.card-subtitle {
 		margin-top: 5px;
 		color: #666;
-		font-weight: lighter;
+		font-weight: bold;
 		position: relative;
-		z-index: 2;
+		z-index: 3;
 	}
 	
 	.card-image {
-		height: 180px;
+		height: 200px;
 		position: relative;
 		z-index: 2;
 	}
